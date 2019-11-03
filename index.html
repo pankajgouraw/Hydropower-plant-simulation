@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>power plant</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    	<section class="thermal-section">
+    		<div class="container thermal-container">
+    			<div class="thermal-wrapper">
+    				<div class="logo"><img src="logo.png"></div>
+    				<div class="mobileMenu"><i class="fa fa-bars"></i></div>
+    				<div class="system-control-box">
+    					<p>No of houses: <span class="showNum">10</span></p>
+    					<p>Efficiency of plant</p>
+    						<div class="height-control-wrapper">
+					    	<div class="height-control-container">
+					    	<input 
+						    	type="range" 
+						    	min="0" 
+						    	max="100" 
+						    	value="80" 
+						    	step="1" 
+						    	oninput="efficiencyofPlant(this.value)" 
+						    	name=""
+						    	id="efficiencyofPlant">
+						    </div>
+					        <span id="showEfficiency" class="showNum">80%</span>
+					    </div>
+					    <p>Head height (m)</p>
+					    <div class="height-control-wrapper">
+					    	<div class="height-control-container">
+					    	<input 
+						    	type="range" 
+						    	min="0" 
+						    	max="100" 
+						    	value="20" 
+						    	step="1" 
+						    	oninput="damHeight(this.value)" 
+						    	name=""
+						    	id="damHeight">
+						    </div>
+					        <span id="showDamHeight" class="showNum">20</span>
+					    </div>
+					    <p>Power output = <span id="powerOutput" class="showData">0 kW</span></p>
+					    <p>Number of houses provided (n)=</p>
+					    <p>Total demand per day (D) =</p>
+					    <p>Power generated per day (P)=</p>
+					    <p>Energy generated per day (E) =</p>
+					    <p>Extra energy produced per day =</p>
+					    <button class="btn btn-success" id="start">Start</button>
+				    </div>
+				    <div class="waterFlow-container">
+				    	<img src="waterFlow/waterFlow_5.png" alt="" id="damImage">
+				    </div>
+				    <div class="generator-container">
+				    	<img src="generator.png" alt="" id="generator">
+				    	<img src="turbine/Motor Rotation0001.png" alt="" id="turbine">
+				    	<img src="turbine/Motor Rotation0001.png" alt="" id="turbine2" style="display: none;">
+				    </div>
+    			</div>
+    		</div>
+    	</section>
+
+
+		<!-- <button class="btn btn-danger">hello chudail</button> -->
+    	<script   src="https://code.jquery.com/jquery-3.3.1.min.js"
+				  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+				  crossorigin="anonymous">
+		</script>
+		<script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
